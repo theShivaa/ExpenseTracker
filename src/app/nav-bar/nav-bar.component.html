@@ -1,0 +1,21 @@
+<mat-toolbar color="primary">
+  <div>
+    <span routerLink="/">Expense Tracker</span>
+  </div>
+  <div class="add-task">
+    <button type="button" mat-icon-button (click)="addExpense()">
+      <!-- <mat-icon aria-label="Side nav toggle icon">menu</mat-icon> -->
+      Add Expense
+    </button>
+  </div>
+  <div>
+    <a routerLink="table-view" style="color: white">
+        <button type="button" mat-icon-button>
+            Table View
+            <!-- <mat-icon aria-label="Side nav toggle icon">menu</mat-icon> -->
+          </button>
+    </a>
+
+  </div>
+
+</mat-toolbar>

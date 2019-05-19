@@ -1,0 +1,40 @@
+<mat-card class="expense-card">
+  <mat-card-title>Add Expense</mat-card-title>
+  <mat-card-content>
+
+    <div>
+        <mat-form-field>
+            <input matInput placeholder="Amount" type="number" class="right-align" [(ngModel)]="amount">
+            <span matPrefix>$&nbsp;</span>
+            <span matSuffix>.00</span>
+          </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field>
+        <input matInput [matDatepicker]="picker" placeholder="Date" [value]="date.value"  [(ngModel)]="datea">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field>
+        <mat-label>Select an option</mat-label>
+        <mat-select [(value)]="selected" >
+          <mat-option>None</mat-option>
+          <mat-option value="House Hold">House Hold</mat-option>
+          <mat-option value="Grocery">Grocery</mat-option>
+          <mat-option value="Food">Food</mat-option>
+          <mat-option value="Taxi" >Taxi</mat-option>
+          <mat-option value="Other" >Other</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div mat-dialog-actions>
+        <button mat-button (click)="onNoClick()">Cancel</button>
+        <button mat-button (click)="addExpense()" cdkFocusInitial>Add</button>
+      </div>
+  </mat-card-content>
+</mat-card>

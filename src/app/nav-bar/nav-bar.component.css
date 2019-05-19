@@ -1,0 +1,59 @@
+.mat-toolbar{
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+}
+
+.add-task{
+  grid-column: 11/12
+}
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+@media screen and (max-width:1150px){
+  .mat-toolbar{
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+  }
+  .add-task{
+    grid-column: 7/8;
+  }
+}
+
+
+@media screen and (max-width:800px){
+  .mat-toolbar{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+  }
+  .add-task{
+    grid-column: 5/6;
+  }
+}
+
+@media screen and (max-width:650px){
+  .mat-toolbar{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+  }
+  .add-task{
+    grid-column: 3/4;
+  }
+}
+
+
+@media screen and (max-width:460px){
+  .mat-toolbar{
+    display: grid;
+    height: 70px;
+    grid-template-columns: auto auto auto;
+  }
+
+}
+
